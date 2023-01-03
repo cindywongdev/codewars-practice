@@ -8,17 +8,15 @@
 
 const array = [1, 2, 3, 4, 5]
 
-console.log(array)
+// this solution yields "expected [+0] to deeply equal [-0] error"
+// function invert(array){
+//     return array.map((element, index) => element - element*2)
+// }
 
+// omg it was THIS simple...?!
+// TO INVERT ELEMENT: just slap a - sign in front of the element
 function invert(array){
-    return array.map((element, index) => {
-    //   const elementCopy = {...element}
-      return element - element*2
-    })
+    return array.map((element, index) => -element)
 }
 
-const invertedArray = invert(array)
-
-console.log(invertedArray)
-
-console.log(array)
+console.log(invert(array))
