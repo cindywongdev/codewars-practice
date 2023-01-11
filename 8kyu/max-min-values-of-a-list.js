@@ -9,7 +9,10 @@
 // Notes
 // You may consider that there will not be any empty arrays/vectors.
 
-const array = [4,6,2,1,9,63,-134,566]
+const array1 = [4,6,2,1,9,63,-134,566]
+const array2 = [-52, 56, 30, 29, -54, 0, -110]
+const array3 = [42, 54, 65, 87, 0]
+const array4 = [5]
 
 // My Solution
 // option 1: sort array in asc or desc order, return first value of array which will be max or min
@@ -29,5 +32,5 @@ const findMin = (array) => {
     return sortedAscendingArr[0]
 }
 
-console.log("Max is:", findMax(array))
-console.log("Min is:", findMin(array))
+console.log("Max is:", findMax(array1))
+console.log("Min is:", findMin(array1))
