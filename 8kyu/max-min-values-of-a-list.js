@@ -12,14 +12,22 @@
 const array = [4,6,2,1,9,63,-134,566]
 
 // My Solution
+// option 1: sort array in asc or desc order, return first value of array which will be max or min
+// ASCENDING: a - b
+// DESCENDING: b - a
 
 const findMax = (array) => {
-    return "This is max"
+    // sort array in descending order
+    const sortedDescendingArr = array.sort((a, b) => b - a)
+    return sortedDescendingArr[0]
 }
 
 const findMin = (array) => {
-    return "This is min"
+    // sort array in ascending order
+    const sortedAscendingArr = array.sort((a, b) => a - b)
+    // return first elem of array, which is the min
+    return sortedAscendingArr[0]
 }
 
-console.log(findMax(array))
-console.log(findMin(array))
+console.log("Max is:", findMax(array))
+console.log("Min is:", findMin(array))
