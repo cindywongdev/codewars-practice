@@ -12,6 +12,10 @@
 
 // time = 11.8--> litres = 5
 
+const time = 11.8
+
 function litres(time) {
-    return "liters ="
+    return Math.floor(time/2)
   }
+
+console.log(litres(time))
