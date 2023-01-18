@@ -7,5 +7,12 @@
 // mango(9, 5) ==> 30   # 6 mangoes for 5 = 30; +3 mangoes for free
 
 function mango(quantity, price){
-
+    const mangoesPaidFor = Math.ceil(quantity * (2/3))
+    const total = mangoesPaidFor * price
+    return total
 }
+
+console.log(mango(2, 3)) // total = 6
+console.log(mango(3, 3)) // total = 6
+console.log(mango(5, 3)) // total = 12
+console.log(mango(9, 5)) // total = 30
