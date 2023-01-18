@@ -16,3 +16,5 @@ console.log(mango(2, 3)) // total = 6
 console.log(mango(3, 3)) // total = 6
 console.log(mango(5, 3)) // total = 12
 console.log(mango(9, 5)) // total = 30
+
+// All tests passed!
