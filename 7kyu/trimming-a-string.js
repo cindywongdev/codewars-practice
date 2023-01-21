@@ -12,6 +12,11 @@
 
 // e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
 
+const str = "How are you?"
+
 function trim(str, size) {
-    return str;
+    const trimmedStr = str.slice(0, size) + "..."
+    return trimmedStr;
   }
+
+console.log(trim(str, 5))
