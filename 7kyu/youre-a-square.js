@@ -10,6 +10,18 @@
 
 // The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
-var isSquare = function(n){
-    return false; // fix me
-  }
+function isSquare(n){
+    if (n<0) {
+      return false
+    }
+
+    for (i=0; i<=n; i++) {
+      while (i**2 <= n) {
+        if (i**2 === n) {return true}
+        i+=1
+      }
+      return false
+    }
+}
+
+console.log(isSquare(0))
