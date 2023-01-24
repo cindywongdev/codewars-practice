@@ -25,3 +25,11 @@ function isSquare(n){
 }
 
 console.log(isSquare(0))
+
+// much simpler solution
+// using Math.sqrt()
+
+function isSquareSimplified(n){
+  // return whether the square root of n is an integer (if divided by 1, the remainder is 0)
+  return Math.sqrt(n) % 1 === 0
+}
