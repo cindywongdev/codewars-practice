@@ -13,6 +13,13 @@
 
 const busStops = [[10,0],[3,5],[5,8]]
 
-var number = function(busStops){
-    // Good Luck!
-  }
+const number = function(busStops){
+    let num = 0
+    for (stop of busStops) {
+      num += stop[0]
+      num -= stop[1]
+    }
+    return num
+}
+
+console.log(number(busStops))
