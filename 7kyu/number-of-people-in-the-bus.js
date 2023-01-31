@@ -23,3 +23,9 @@ const number = function(busStops){
 }
 
 console.log(number(busStops))
+
+
+// shorter solution
+const number2 = function(busStops){
+  return busStops.reduce((acc, stop) => acc + stop[0] - stop[1],0)
+}
