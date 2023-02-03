@@ -7,6 +7,13 @@
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
-String.prototype.toJadenCase = function () {
-    //...
-  };
+str = "How can mirrors be real if our eyes aren't real"
+
+const toJadenCase = (str) => {
+    const strArr = str.split(" ")
+    const strArrJadenCase = strArr.map((word) => word[0].toUpperCase() + word.slice(1))
+    const strJadenCase = strArrJadenCase.join(" ")
+    return strJadenCase
+}
+
+console.log(toJadenCase(str))
