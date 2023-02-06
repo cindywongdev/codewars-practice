@@ -31,3 +31,17 @@ function createPhoneNumber(numbers){
 }
 
 console.log(createPhoneNumber(numbers))
+
+// shorter solution
+
+const createPhoneNumber2 = (numbers) => {
+    let format = "(xxx) xxx-xxxx"
+
+    for (number of numbers) {
+        format = format.replace("x", number)
+    }
+
+    return format
+}
+
+console.log(createPhoneNumber2(numbers))
