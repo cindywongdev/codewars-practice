@@ -45,3 +45,15 @@ const createPhoneNumber2 = (numbers) => {
 }
 
 console.log(createPhoneNumber2(numbers))
+
+// another shorter solution
+
+const createPhoneNumber3 = (numbers) => {
+    // first, join array into a string so that we can use substring method
+    const numStr = numbers.join('')
+    // concatenate to create correctly formatted phone #
+    const phoneNumber = '(' + numStr.substring(0, 3) + ')' + ' ' + numStr.substring(3,6) + '-' + numStr.substring(6,10)
+    return phoneNumber
+}
+
+console.log(createPhoneNumber3(numbers))
