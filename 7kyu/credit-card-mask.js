@@ -23,7 +23,7 @@ const cc3 = "1"
 const cc4 = ""
 
 function maskify(cc) {
-    return cc
+    return cc + "####"
 }
 
 console.log(maskify(cc))
