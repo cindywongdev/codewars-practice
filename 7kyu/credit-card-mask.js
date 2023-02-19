@@ -23,7 +23,8 @@ const cc3 = "1"
 const cc4 = ""
 
 function maskify(cc) {
-    return cc + "####"
+    const lastFourStart = cc.length - 4
+    return cc.slice(0, lastFourStart).split("").map(letter => "#").join("") + cc.slice(lastFourStart)
 }
 
 console.log(maskify(cc))
