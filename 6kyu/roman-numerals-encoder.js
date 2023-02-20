@@ -17,11 +17,16 @@
 // M          1,000
 // Remember that there can't be more than 3 identical symbols in a row.
 
-const number = 9
+const min = 1
+const max = 3999
+
+const number = 3500
 
 function solution(number){
     // convert the number to a roman numeral
-    return number
+    const numM = Math.floor(number/1000)
+    const numD = Math.floor((number - numM * 1000)/500)
+    return [numM, numD]
 }
 
 console.log(solution(number))
