@@ -21,6 +21,9 @@
 // M          1,000
 // Remember that there can't be more than 3 identical symbols in a row.
 
+// ^ to resolve above: maybe treat the 9's differently?
+// or make it so if numLetter >3, special treatment?
+
 const min = 1
 const max = 3999
 
