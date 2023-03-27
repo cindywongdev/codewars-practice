@@ -24,7 +24,7 @@
 const min = 1
 const max = 3999
 
-const number = 3700
+const number = 1666
 
 function solution(number) {
     // convert the number to a roman numeral
@@ -72,7 +72,10 @@ function solution(number) {
         remainder = determineNumLetter(number, M, "M")
         remainder = determineNumLetter(remainder, D, "D")
         remainder = determineNumLetter(remainder, C, "C")
-
+        remainder = determineNumLetter(remainder, L, "L")
+        remainder = determineNumLetter(remainder, X, "X")
+        remainder = determineNumLetter(remainder, V, "V")
+        remainder = determineNumLetter(remainder, I, "I")
         
     }
 
