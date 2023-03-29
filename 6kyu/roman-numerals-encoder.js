@@ -27,7 +27,8 @@
 const min = 1
 const max = 3999
 
-const number = 1666
+// const number = 1666
+const number = 3999
 
 function solution(number) {
     // convert the number to a roman numeral
@@ -44,6 +45,39 @@ function solution(number) {
     const result = []
     let remainder = number
 
+    // find any and all 9's first (special treatment)
+    let indicesOf9 = []
+    const numToStrArr = number.toString().split("")
+    let indexOf9 = numToStrArr.indexOf("9")
+    while (indexOf9 !== -1) {
+        indicesOf9.push(indexOf9)
+        indexOf9 = numToStrArr.indexOf("9", indexOf9 + 1)
+    }
+    console.log(indicesOf9)
+
+    // function to check value of 9 based on index (only needa search indexes 1,2,3 since max val is 3999)
+    function convert9(index){
+        // if 9 is in the hundreds place (900)
+        if (index === 1) {
+            return "CM"
+        }
+        // if 9 is in the tens place (90)
+        if (index === 2) {
+            return "XC"
+        }
+        // if 9 is in the ones place (9)
+        if (index === 3) {
+            return "IX"
+        }
+    }
+
+    let LetterArray9 = []
+
+    for (index of indicesOf9) {
+        LetterArray9.push(convert9(index))
+    }
+
+    console.log(LetterArray9)
 
     function findNumberOfLetter(remainder, letterVal) {
         const numOfLetter = Math.floor(remainder / letterVal)
