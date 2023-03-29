@@ -30,6 +30,16 @@ const max = 3999
 // const number = 1666
 const number = 3999
 
+// ALT SOLUTION IDEA!!!
+// initialize result array
+// split number into array and deal with each # one by one
+// for loop based on index (aka tens (?) place)
+// check if # is a 9
+// if not, do the math (ex. 3 in 0 index aka thousand's place => push 3 Ms into array)
+// if yes, special treatment (ex. 9 in 1 index aka hundred's place => push CM into array)
+// if # is a 0, skip it
+// if end of array is reached, return the result!
+
 function solution(number) {
     // convert the number to a roman numeral
     // define constants
