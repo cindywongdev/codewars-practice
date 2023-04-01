@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 166
+const number = 3999
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -42,7 +42,7 @@ const number = 166
 
 function solution(number){
     // initialize result array
-    const result = []
+    let result = []
 
     // split number into array
     const numToStrArr = number.toString().split("")
@@ -56,11 +56,39 @@ function solution(number){
     }
 
     // now iterate through array
-    // for (num of numToStrArr) {
+    for (i=0; i<numToStrArr.length; i+=1) {
+        // get the int value of the number
+        let num = parseInt(numToStrArr[i])
+        console.log(num)
 
-    // }
+        // if number is in index 0 aka thousands place, and value of the number is > 0, push that number of M's into the results array
+        if (i === 0 && num > 0) {
+            // add M to result, num times
+            for (i=0; i<num; i++) {
+                result.push("M")
+            }
+            console.log("You've reached me")
+        }
+        console.log("You've reached me outside")
 
-    return(numToStrArr)
+        // num in hundreds place
+        if (i === 1 && num > 0) {
+            console.log("Why don't you reach me :(")
+            // check if number is a 9 aka 900
+            if (num === 9) {
+                // push 900
+                result.push("I", "M")
+            }
+            // check if number is greater than 500
+            if (num > 5) {
+                result.push("D")
+                // get remainder
+                num -= 5
+            }
+        }
+    }
+
+    return[numToStrArr, result]
 }
 
 // function solution(number) {
