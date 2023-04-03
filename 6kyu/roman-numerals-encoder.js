@@ -59,18 +59,20 @@ function solution(number){
     for (i=0; i<numToStrArr.length; i+=1) {
         // get the int value of the number
         let num = parseInt(numToStrArr[i])
-        console.log(num)
+        console.log(i, num)
 
         // if number is in index 0 aka thousands place, and value of the number is > 0, push that number of M's into the results array
         if (i === 0 && num > 0) {
             // add M to result, num times
-            for (i=0; i<num; i++) {
+            for (j=0; j<num; j++) {
                 result.push("M")
+                console.log(i)
             }
             console.log("You've reached me")
         }
         console.log("You've reached me outside")
 
+        console.log(i)
         // num in hundreds place
         if (i === 1 && num > 0) {
             console.log("Why don't you reach me :(")
@@ -80,7 +82,7 @@ function solution(number){
                 result.push("I", "M")
             }
             // check if number is greater than 500
-            if (num > 5) {
+            else if (num > 5) {
                 result.push("D")
                 // get remainder
                 num -= 5
