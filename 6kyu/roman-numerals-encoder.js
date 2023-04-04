@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 1
+const number = 1111
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -59,19 +59,20 @@ function solution(number){
     for (i=0; i<numToStrArr.length; i+=1) {
         // get the int value of the number
         let num = parseInt(numToStrArr[i])
-        console.log(i, num)
+        console.log("index for this loop:", i)
+        console.log("num value for this loop:", num)
 
         // if number is in index 0 aka thousands place, and value of the number is > 0, push that number of M's into the results array
         if (i === 0 && num > 0) {
             // add M to result, num times
             for (j=0; j<num; j++) {
                 result.push("M")
-                console.log(i)
             }
         }
 
         // num in hundreds place
         if (i === 1 && num > 0) {
+            console.log("num before sub:", num)
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
@@ -82,11 +83,18 @@ function solution(number){
                 result.push("D")
                 // get remainder
                 num -= 5
+            }
+
+            // push remainder in, if there is any
+            console.log("num after sub:", num)
+            if (num > 1) {
                 console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("C")
                 }
             }
+                
+            // }
         }
 
         // num in hundreds place
