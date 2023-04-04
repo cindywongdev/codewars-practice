@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 3999
+const number = 3899
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -68,14 +68,10 @@ function solution(number){
                 result.push("M")
                 console.log(i)
             }
-            console.log("You've reached me")
         }
-        console.log("You've reached me outside")
 
-        console.log(i)
         // num in hundreds place
         if (i === 1 && num > 0) {
-            console.log("Why don't you reach me :(")
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
@@ -86,6 +82,48 @@ function solution(number){
                 result.push("D")
                 // get remainder
                 num -= 5
+                console.log("remainder is:", num)
+                for (j=0; j<num; j++) {
+                    result.push("C")
+                }
+            }
+        }
+
+        // num in hundreds place
+        if (i === 2 && num > 0) {
+            // check if number is a 9 aka 900
+            if (num === 9) {
+                // push 900
+                result.push("X", "C")
+            }
+            // check if number is greater than 500
+            else if (num > 5) {
+                result.push("L")
+                // get remainder
+                num -= 5
+                console.log("remainder is:", num)
+                for (j=0; j<num; j++) {
+                    result.push("X")
+                }
+            }
+        }
+
+        // num in hundreds place
+        if (i === 3 && num > 0) {
+            // check if number is a 9 aka 900
+            if (num === 9) {
+                // push 900
+                result.push("X", "C")
+            }
+            // check if number is greater than 500
+            else if (num > 5) {
+                result.push("L")
+                // get remainder
+                num -= 5
+                console.log("remainder is:", num)
+                for (j=0; j<num; j++) {
+                    result.push("X")
+                }
             }
         }
     }
