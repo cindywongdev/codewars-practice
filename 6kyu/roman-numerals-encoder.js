@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 3899
+const number = 1
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -113,22 +113,25 @@ function solution(number){
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
-                result.push("X", "C")
+                result.push("I", "X")
             }
             // check if number is greater than 500
             else if (num > 5) {
-                result.push("L")
+                result.push("V")
                 // get remainder
                 num -= 5
                 console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
-                    result.push("X")
+                    result.push("I")
                 }
             }
         }
     }
 
-    return[numToStrArr, result]
+    // turn arr back into str
+    const resultStr = result.join("")
+
+    return resultStr
 }
 
 // function solution(number) {
