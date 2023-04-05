@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 1111
+const number = 4
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -39,6 +39,11 @@ const number = 1111
 // if yes, special treatment (ex. 9 in 1 index aka hundred's place => push CM into array)
 // if # is a 0, skip it
 // if end of array is reached, return the result!
+
+
+// OHHHH 4's ALSO GET special treatment
+// not just 9's
+// NEXT STEPS: ADD SPECIAL TREATMENT TO 4'S FOR EVERY PLACE EXCEPT THE THOUSANDTHS
 
 function solution(number){
     // initialize result array
@@ -54,6 +59,8 @@ function solution(number){
         numToStrArr.unshift('0')
         arrLength += 1
     }
+
+    console.log(numToStrArr)
 
     // now iterate through array
     for (i=0; i<numToStrArr.length; i+=1) {
@@ -72,7 +79,7 @@ function solution(number){
 
         // num in hundreds place
         if (i === 1 && num > 0) {
-            console.log("num before sub:", num)
+            // console.log("num before sub:", num)
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
@@ -86,9 +93,9 @@ function solution(number){
             }
 
             // push remainder in, if there is any
-            console.log("num after sub:", num)
-            if (num > 1) {
-                console.log("remainder is:", num)
+            // console.log("num after sub:", num)
+            if (num >= 1) {
+                // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("C")
                 }
@@ -114,6 +121,13 @@ function solution(number){
                     result.push("X")
                 }
             }
+
+            if (num >= 1) {
+                // console.log("remainder is:", num)
+                for (j=0; j<num; j++) {
+                    result.push("X")
+                }
+            }
         }
 
         // num in hundreds place
@@ -129,6 +143,13 @@ function solution(number){
                 // get remainder
                 num -= 5
                 console.log("remainder is:", num)
+                for (j=0; j<num; j++) {
+                    result.push("I")
+                }
+            }
+
+            if (num >= 1) {
+                // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("I")
                 }
