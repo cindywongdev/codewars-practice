@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 4
+const number = 1400
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -92,9 +92,13 @@ function solution(number){
                 num -= 5
             }
 
+            // check if num is 4
+            if (num === 4) {
+                result.push("C", "D")
+            }
             // push remainder in, if there is any
             // console.log("num after sub:", num)
-            if (num >= 1) {
+            else if (num >= 1) {
                 // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("C")
