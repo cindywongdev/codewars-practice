@@ -83,7 +83,7 @@ function solution(number){
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
-                result.push("I", "M")
+                result.push("C", "M")
             }
             // check if number is greater than 500
             else if (num >= 5) {
