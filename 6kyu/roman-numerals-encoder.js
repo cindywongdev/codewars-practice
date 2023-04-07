@@ -28,7 +28,8 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 1990
+const number = 1768
+// 1768 should return "MDCCLXVIII": expected 'MDLXVIII' to equal 'MDCCLXVIII'
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -39,11 +40,6 @@ const number = 1990
 // if yes, special treatment (ex. 9 in 1 index aka hundred's place => push CM into array)
 // if # is a 0, skip it
 // if end of array is reached, return the result!
-
-
-// OHHHH 4's ALSO GET special treatment
-// not just 9's
-// NEXT STEPS: ADD SPECIAL TREATMENT TO 4'S FOR EVERY PLACE EXCEPT THE THOUSANDTHS
 
 function solution(number){
     // initialize result array
