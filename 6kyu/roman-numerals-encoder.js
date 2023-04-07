@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 1400
+const number = 1444
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -108,7 +108,7 @@ function solution(number){
             // }
         }
 
-        // num in hundreds place
+        // num in tens place
         if (i === 2 && num > 0) {
             // check if number is a 9 aka 900
             if (num === 9) {
@@ -126,7 +126,11 @@ function solution(number){
                 }
             }
 
-            if (num >= 1) {
+            // check if num is 4
+            if (num === 4) {
+                result.push("X", "L")
+            }
+            else if (num >= 1) {
                 // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("X")
@@ -134,14 +138,14 @@ function solution(number){
             }
         }
 
-        // num in hundreds place
+        // num in tens place
         if (i === 3 && num > 0) {
-            // check if number is a 9 aka 900
+            // check if number is a 9
             if (num === 9) {
                 // push 900
                 result.push("I", "X")
             }
-            // check if number is greater than 500
+            // check if number is greater than 5
             else if (num > 5) {
                 result.push("V")
                 // get remainder
@@ -152,7 +156,11 @@ function solution(number){
                 }
             }
 
-            if (num >= 1) {
+            // check if num is 4
+            if (num === 4) {
+                result.push("I", "V")
+            }
+            else if (num >= 1) {
                 // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("I")
