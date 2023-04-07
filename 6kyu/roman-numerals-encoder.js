@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 1444
+const number = 1990
 
 // ALT SOLUTION IDEA!!!
 // initialize result array
@@ -86,14 +86,14 @@ function solution(number){
                 result.push("I", "M")
             }
             // check if number is greater than 500
-            else if (num > 5) {
+            else if (num >= 5) {
                 result.push("D")
                 // get remainder
                 num -= 5
             }
 
             // check if num is 4
-            if (num === 4) {
+            else if (num === 4) {
                 result.push("C", "D")
             }
             // push remainder in, if there is any
@@ -116,7 +116,7 @@ function solution(number){
                 result.push("X", "C")
             }
             // check if number is greater than 500
-            else if (num > 5) {
+            else if (num >= 5) {
                 result.push("L")
                 // get remainder
                 num -= 5
@@ -127,7 +127,7 @@ function solution(number){
             }
 
             // check if num is 4
-            if (num === 4) {
+            else if (num === 4) {
                 result.push("X", "L")
             }
             else if (num >= 1) {
@@ -146,7 +146,7 @@ function solution(number){
                 result.push("I", "X")
             }
             // check if number is greater than 5
-            else if (num > 5) {
+            else if (num >= 5) {
                 result.push("V")
                 // get remainder
                 num -= 5
@@ -155,9 +155,8 @@ function solution(number){
                     result.push("I")
                 }
             }
-
             // check if num is 4
-            if (num === 4) {
+            else if (num === 4) {
                 result.push("I", "V")
             }
             else if (num >= 1) {
