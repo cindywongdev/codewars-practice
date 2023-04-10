@@ -28,7 +28,7 @@ const min = 1
 const max = 3999
 
 // const number = 1666
-const number = 4
+const number = 10
 // 1768 should return "MDCCLXVIII": expected 'MDLXVIII' to equal 'MDCCLXVIII'
 
 // ALT SOLUTION IDEA!!!
@@ -95,13 +95,13 @@ function solution(number){
                 // get remainder
                 num -= 5
                 for (j=0; j<num; j++) {
-                    result.push("I")
+                    result.push("C")
                 }
             }
             // handle remainder or when value <4
             else if (num >= 1) {
                 for (j=0; j<num; j++) {
-                    result.push("I")
+                    result.push("C")
                 }
             }
         }
@@ -125,12 +125,12 @@ function solution(number){
                 num -= 5
                 console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
-                    result.push("I")
+                    result.push("X")
                 }
             }
             else if (num >= 1) {
                 for (j=0; j<num; j++) {
-                    result.push("I")
+                    result.push("X")
                 }
             }
         }
