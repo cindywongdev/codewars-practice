@@ -1,7 +1,6 @@
 // Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 
-let arr = [0, 1, 2, 3, 0, 0, "a"]
-console.log(arr.length)
+let arr = [1, 2, 3, 0, 0, "a"]
 
 function moveZeros(arr) {
     let zeroIndexes = []
@@ -21,7 +20,7 @@ function moveZeros(arr) {
         // const removed = arr.splice(index, 1)
         // arr.push(removed)
         arr.splice(index, 1)
-        // arr.push(0)
+        arr.push(0)
     }
 
     return arr.flat()
