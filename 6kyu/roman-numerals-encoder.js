@@ -76,32 +76,29 @@ function solution(number){
         // num in hundreds place
         if (i === 1 && num > 0) {
             // console.log("num before sub:", num)
+            
+            // CHECK for SPECIAL CASES (9 and 4)
+
             // check if number is a 9 aka 900
             if (num === 9) {
                 // push 900
                 result.push("C", "M")
             }
+            // check if num is 4
+            else if (num === 4) {
+                result.push("C", "D")
+            }
+
             // check if number is greater than 500
             else if (num >= 5) {
                 result.push("D")
                 // get remainder
                 num -= 5
-            }
-
-            // check if num is 4
-            else if (num === 4) {
-                result.push("C", "D")
-            }
-            // push remainder in, if there is any
-            // console.log("num after sub:", num)
-            else if (num >= 1) {
-                // console.log("remainder is:", num)
+                // push remainder in, if there is any
                 for (j=0; j<num; j++) {
                     result.push("C")
                 }
             }
-                
-            // }
         }
 
         // num in tens place
@@ -111,23 +108,17 @@ function solution(number){
                 // push 900
                 result.push("X", "C")
             }
+            // check if num is 4
+            else if (num === 4) {
+                result.push("X", "L")
+            }
+
             // check if number is greater than 500
             else if (num >= 5) {
                 result.push("L")
                 // get remainder
                 num -= 5
                 console.log("remainder is:", num)
-                for (j=0; j<num; j++) {
-                    result.push("X")
-                }
-            }
-
-            // check if num is 4
-            else if (num === 4) {
-                result.push("X", "L")
-            }
-            else if (num >= 1) {
-                // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("X")
                 }
@@ -141,22 +132,17 @@ function solution(number){
                 // push 900
                 result.push("I", "X")
             }
+            // check if num is 4
+            else if (num === 4) {
+                result.push("I", "V")
+            }
+
             // check if number is greater than 5
             else if (num >= 5) {
                 result.push("V")
                 // get remainder
                 num -= 5
                 console.log("remainder is:", num)
-                for (j=0; j<num; j++) {
-                    result.push("I")
-                }
-            }
-            // check if num is 4
-            else if (num === 4) {
-                result.push("I", "V")
-            }
-            else if (num >= 1) {
-                // console.log("remainder is:", num)
                 for (j=0; j<num; j++) {
                     result.push("I")
                 }
