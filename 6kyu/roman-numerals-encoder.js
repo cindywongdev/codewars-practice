@@ -172,6 +172,41 @@ function solution(number){
     return resultStr
 }
 
+
+// ALT SOLUTION
+function solution2(number){
+  // convert the number to a roman numeral
+  let  roman = {M:1000, CM:900, D:500, CD:400, C:100, XC:90, L:50, XL:40, X:10, IX:9, V:5, IV:4, I:1 }
+  
+  let ans = '';
+  while(number > 0){
+      for(a in roman){ 
+          // this loop breaks ONLY if a roman numeral (RN) value smaller than the value of the number (or what remains of it) is found
+          // otherwise, it keeps iterating thru the object to find a numeral value that works
+          // SO SMART!!
+          if (roman[a]<=number) {
+            // add RN to answer
+            ans += a
+            // subtract RN from number
+            number-=roman[a]
+            // break loop so that for loop can completely restart from the beginning of the object
+            // import for numbers with repeating RNs such as 3000 (MMM)
+            break
+          }       
+      }
+  }
+  return ans;
+}
+
+// TESTS
+
+// console.log(solution(number))
+const number2 = 3000
+console.log(solution2(number2))
+
+
+// SCRAP CODE
+
 // function solution(number) {
 //     // convert the number to a roman numeral
 //     // define constants
@@ -262,7 +297,7 @@ function solution(number){
 //     return result.join("")
 // }
 
-console.log(solution(number))
+
 
 // Initial Attempts
 
