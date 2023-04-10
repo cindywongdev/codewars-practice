@@ -1,6 +1,6 @@
 // Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 
-let arr = [0, 1, 2, 3, 0, 0]
+let arr = [0, 1, 2, 3, 0, 0, "a"]
 console.log(arr.length)
 
 function moveZeros(arr) {
@@ -18,8 +18,10 @@ function moveZeros(arr) {
 
     // now slice 0s out at their indexes
     for (index of zeroIndexes) {
-        const removed = arr.splice(index, 1)
-        arr.push(removed)
+        // const removed = arr.splice(index, 1)
+        // arr.push(removed)
+        arr.splice(index, 1)
+        // arr.push(0)
     }
 
     return arr.flat()
@@ -27,7 +29,7 @@ function moveZeros(arr) {
 
 console.log("My test case:", moveZeros(arr))
 
-console.log("Codewars test case:", moveZeros([false,1,0,1,2,0,1,3,"a"])) // returns[false,1,1,2,1,3,"a",0,0]
+// console.log("Codewars test case:", moveZeros([false,1,0,1,2,0,1,3,"a"])) // returns[false,1,1,2,1,3,"a",0,0]
 
 // function testPop() {
 //     let testArr = [0, 1, 2, 3]
