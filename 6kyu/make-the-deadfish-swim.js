@@ -10,7 +10,26 @@
 
 
 function parse(data){
+    let value = 0
+    let returnArr = []
 
+    for (command of data) {
+        switch(command){
+            case 'i':
+                value += 1
+            case 'd':
+                // value -= 1
+                break
+            case 's':
+                console.log("value is:", value)
+                value = value **2
+            case 'o':
+                break
+                // returnArr.push(value)
+        }
+    }
+    return value
 }
 
-parse("iiisdoso") // => [ 8, 64 ]
+console.log(parse("iiisd")) // => 8
+// console.log(parse("iiisdoso")) // => [ 8, 64 ]
