@@ -44,11 +44,21 @@ function maximizePoints(team1, team2){
 
         // swap power1s on team1
         console.log(team1)
-        
+        console.log(team1[0])
+        console.log(team1[diffArr[0].power1Index])
+
+        // team1[0] = team1[diffArr[0].power1Index]
+        // team1[diffArr[0].power1Index] = team1[0]
+
+        const valToAdd = team1[diffArr[0].power1Index]
+        team1.splice(diffArr[0].power1Index, 1)
+        team1.unshift(valToAdd)
         // [team1[0], team1[diffArr[0].power1Index]] = team1[diffArr[0].power1Index], team1[0]
 
-        // console.log(team1)
+        console.log(team1)
     }
+
+    return "function ran"
 }
 
 console.log(maximizePoints([3,2,4], [1,2,3]))
