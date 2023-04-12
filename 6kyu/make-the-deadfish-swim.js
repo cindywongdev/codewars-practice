@@ -14,22 +14,24 @@ function parse(data){
     let returnArr = []
 
     for (command of data) {
+        console.log(command)
         switch(command){
             case 'i':
                 value += 1
+                break
             case 'd':
-                // value -= 1
+                value -= 1
                 break
             case 's':
-                console.log("value is:", value)
                 value = value **2
-            case 'o':
                 break
-                // returnArr.push(value)
+            case 'o':
+                returnArr.push(value)
+                break
         }
     }
-    return value
+    return returnArr
 }
 
-console.log(parse("iiisd")) // => 8
-// console.log(parse("iiisdoso")) // => [ 8, 64 ]
+console.log(parse("iiisdo")) // => 8
+console.log(parse("iiisdoso")) // => [ 8, 64 ]
