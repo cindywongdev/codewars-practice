@@ -13,7 +13,7 @@ function moveZeros(arr) {
         zeroIndexes.push(i)
     }
     
-    console.log(zeroIndexes)
+    console.log("zeroIndexes array:", zeroIndexes)
 
     // now slice 0s out at their indexes
     for (index of zeroIndexes) {
