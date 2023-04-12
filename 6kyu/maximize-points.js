@@ -25,10 +25,29 @@
 // However, if you rearrange the order of the players to [2, 3, 4], the first team will get 3 points.
 
 function maximizePoints(team1, team2){
-    for (power1 of team1) {
-        for (power2 of team2){
-            console.log("t1:", power1, "t2:", power2)
-        } 
+    for (power2 of team2) {
+        // array for each power of team 2 of the difference between each power team 2
+        const diffArr = []
+        for (i=0; i<team1.length; i+=1){
+            const power1 = team1[i]
+            // diff between each team1 power and each team2 power
+            // we want the diff to the smallest positive integer
+            const diff = power1 - power2
+            diffArr.push({power1Index: i, diff: diff})
+            console.log("t2:", power2, "t1:", power1, "diff:", diff)
+        }
+        // console.log("diffArr for", power2, ":", diffArr)
+
+        diffArr.sort((a, b) => a.diff > b.diff ? 1 : -1)
+
+        console.log("diffArr sorted:", diffArr)
+
+        // swap power1s on team1
+        console.log(team1)
+        
+        // [team1[0], team1[diffArr[0].power1Index]] = team1[diffArr[0].power1Index], team1[0]
+
+        // console.log(team1)
     }
 }
 
