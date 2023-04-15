@@ -56,7 +56,6 @@ function maximizePoints(team1, team2){
         // [team1[0], team1[diffArr[0].power1Index]] = team1[diffArr[0].power1Index], team1[0]
 
         console.log(team1)
-        console.log(team2)
     }
 
     return "function ran"
