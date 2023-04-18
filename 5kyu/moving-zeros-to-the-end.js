@@ -2,6 +2,10 @@
 
 let arr = [1, 2, 3, 0, 0, "a"]
 
+let strArr = ["a", "z", 0, "g"]
+
+console.log(strArr.indexOf(0))
+
 function moveZeros(arr) {
     let zeroIndexes = []
     // start off i at -1 so that it'll start at index 0 on the first run of while loop
@@ -26,7 +30,7 @@ function moveZeros(arr) {
     return arr.flat()
 }
 
-console.log("My test case:", moveZeros(arr))
+console.log("My test case:", moveZeros(strArr))
 
 // console.log("Codewars test case:", moveZeros([false,1,0,1,2,0,1,3,"a"])) // returns[false,1,1,2,1,3,"a",0,0]
 
