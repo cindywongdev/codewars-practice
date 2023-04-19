@@ -2,7 +2,7 @@
 
 let arr = [1, 2, 3, 0, 0, "a"]
 
-let strArr = ["a", "z", 0, "g"]
+let strArr = ["a", "z", 0, "g", "h"]
 
 console.log(strArr.indexOf(0))
 
