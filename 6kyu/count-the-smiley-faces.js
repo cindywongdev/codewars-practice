@@ -17,8 +17,10 @@
 // Note
 // In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
-arr = [':)', ';(', ';}', ':-D']
-arr2 = [';D', ':-(', ':-)', ';~)']
+const arr = [':)', ';(', ';}', ':-D']
+const arr2 = [';D', ':-(', ':-)', ';~)']
+const arr3 = [';]', ':[', ';*', ':$', ';-D']
+const emptyArr = []
 
 function countSmileys(arr) {
     // 12 possible smiley cases
@@ -32,7 +34,6 @@ function countSmileys(arr) {
     for (smiley of arr) {
         // check if smiley is a valid smiley
         if (validSmileys.includes(smiley)) {
-            console.log(smiley)
             // increment numValidSmileys
             numValidSmileys +=1
         }
@@ -43,3 +44,5 @@ function countSmileys(arr) {
 
 console.log(countSmileys(arr))
 console.log(countSmileys(arr2))
+console.log(countSmileys(arr3))
+console.log(countSmileys(emptyArr))
