@@ -18,6 +18,7 @@
 // In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
 arr = [':)', ';(', ';}', ':-D']
+arr2 = [';D', ':-(', ':-)', ';~)']
 
 function countSmileys(arr) {
     // 12 possible smiley cases
@@ -41,3 +42,4 @@ function countSmileys(arr) {
 }
 
 console.log(countSmileys(arr))
+console.log(countSmileys(arr2))
