@@ -46,3 +46,13 @@ console.log(countSmileys(arr))
 console.log(countSmileys(arr2))
 console.log(countSmileys(arr3))
 console.log(countSmileys(emptyArr))
+
+
+// alt solution
+// much more efficient!!
+// uses regex
+// learn!
+
+// function countSmileys(arr) {
+//     return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+// }
