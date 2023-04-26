@@ -20,17 +20,24 @@
 arr = [':)', ';(', ';}', ':-D']
 
 function countSmileys(arr) {
-    const validEyes = [":", ";"]
-    const validNoses = ["-", "~"]
-    const validSmiles = [")", "D"]
+    // 12 possible smiley cases
+    // if includes nose, total of 3 characters, and then 2 possible choices per char --> 2*2*2 = 8
+    // if no nose, total of 2 characters, and then 2 possible choices per char --> 2*2 = 4
+    // 8 + 4 = 12 possible smileys
+    const validSmileys = [":)", ":-)", ":~)", ":D", ":-D", ":~D", ";)", ";-)", ";~)", ";D", ";-D", ";~D"]
+    let numValidSmileys = 0
 
-    const numValidSmileys = 0
-
+    // iterate through each emoji
     for (smiley of arr) {
-        console.log(smiley)
+        // check if smiley is a valid smiley
+        if (validSmileys.includes(smiley)) {
+            console.log(smiley)
+            // increment numValidSmileys
+            numValidSmileys +=1
+        }
     }
 
-    return 0;
+    return numValidSmileys;
 }
 
-countSmileys(arr)
+console.log(countSmileys(arr))
