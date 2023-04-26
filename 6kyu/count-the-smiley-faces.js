@@ -17,6 +17,8 @@
 // Note
 // In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
+arr = [':)', ';(', ';}', ':-D']
+
 function countSmileys(arr) {
     const validEyes = [":", ";"]
     const validNoses = ["-", "~"]
@@ -24,9 +26,11 @@ function countSmileys(arr) {
 
     const numValidSmileys = 0
 
-    // for (smiley in arr) {
-    //     if ()
-    // }
+    for (smiley of arr) {
+        console.log(smiley)
+    }
 
     return 0;
 }
+
+countSmileys(arr)
