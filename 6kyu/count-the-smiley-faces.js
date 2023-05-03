@@ -47,6 +47,8 @@ console.log(countSmileys(arr2))
 console.log(countSmileys(arr3))
 console.log(countSmileys(emptyArr))
 console.log("test")
+// jest tests
+describe()
 
 
 // alt solution
