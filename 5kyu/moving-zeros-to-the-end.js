@@ -41,5 +41,3 @@ console.log("My test case:", moveZeros(strArr))
 // }
 
 // testPop()
-// testPop()
-// testPop()
